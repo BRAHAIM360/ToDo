@@ -20,7 +20,7 @@ const initialData = [
   }
 ]
 
-export default function MainScreen() {
+export default function MainScreen({ test }) {
   const [data, setData] = useState(initialData)
   const [editingItemId, setEditingItemId] = useState<string | null>(null)
 
@@ -66,8 +66,8 @@ export default function MainScreen() {
       w="full"
     >
       <Masthead
-        title="What's up, Takuya!"
-        image={require('../assets/masthead.png')}
+        title="What's up"
+        image={require('../assets/background2.jpg')}
       >
         <NavBar />
       </Masthead>

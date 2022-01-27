@@ -23,7 +23,7 @@ const AboutScreen = () => {
     >
       <Masthead
         title="About this app"
-        image={require('../assets/about-masthead.png')}
+        image={require('../assets/background1.jpg')}
       >
         <Navbar />
       </Masthead>
@@ -38,7 +38,7 @@ const AboutScreen = () => {
         <VStack flex={1} space={4}>
           <Box alignItems="center">
             <Image
-              source={require('../assets/takuya.jpg')}
+              source={require('../assets/profile.jpg')}
               borderRadius="full"
               resizeMode="cover"
               w={120}
@@ -47,45 +47,46 @@ const AboutScreen = () => {
             />
           </Box>
           <Text fontSize="md" w="full">
-            This is a React Native tutorial built in the YouTube channel called
-            DevAsLife.
+            This is a React Native ToDo app  built by me
           </Text>
           <LinkButton
-            colorScheme="red"
+            colorScheme="blue"
+            // color="#0c0e0f"
             size="lg"
             borderRadius="full"
-            href="https://www.youtube.com/devaslife"
+            href="https://www.linkedin.com/in/brahim-mahioussi-4b2920111/"
             leftIcon={
-              <Icon as={Feather} name="youtube" size="sm" opacity={0.5} />
+              <Icon as={Feather} name="linkedin" size="sm" opacity={0.5} />
             }
           >
-            Go to YouTube channel
+            LinkedIn Profil
           </LinkButton>
           <LinkButton
-            colorScheme={useColorModeValue('blue', 'darkBlue')}
+            // colorScheme={useColorModeValue('#0072b1', 'darkBlue')}
+            // color='#030303'
+            colorScheme='dark'
             size="lg"
             borderRadius="full"
-            href="https://twitter.com/inkdrop_app"
+            href="https://github.com/BRAHAIM360"
             leftIcon={
-              <Icon as={Feather} name="twitter" size="sm" opacity={0.5} />
+              <Icon as={Feather} name="github" size="sm" opacity={0.5} />
             }
           >
-            @inkdrop_app
+            GitHub
           </LinkButton>
           <Text fontSize="md" w="full">
-            Are you looking for a Markdown note-taking app? Check out my app
-            called Inkdrop!
+            Do you want to create your own app? Check my portfolio and contact me!
           </Text>
           <LinkButton
             colorScheme="purple"
             size="lg"
             borderRadius="full"
-            href="https://www.inkdrop.app/"
+            href="https://www.portfolio.mahioussi.com"
             leftIcon={
               <Icon as={Feather} name="external-link" size="sm" opacity={0.5} />
             }
           >
-            https://www.inkdrop.app/
+            https://www.portfolio.mahioussi.com/
           </LinkButton>
         </VStack>
       </ScrollView>
