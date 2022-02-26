@@ -41,7 +41,7 @@ const App = () => {
         overlayColor: '#00000000'
       }}
     >
-      <Drawer.Screen name="Main" component={() => <MainScreen test={"qtat"} />} />
+      <Drawer.Screen name="Main" component={MainScreen} />
       <Drawer.Screen name="About" component={AboutScreen} />
     </Drawer.Navigator>
   )

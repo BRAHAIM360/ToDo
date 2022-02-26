@@ -15,6 +15,9 @@ import { Feather } from '@expo/vector-icons'
 import MenuButton from './menu-button'
 
 const Sidebar = (props: DrawerContentComponentProps) => {
+
+
+
   const { state, navigation } = props
   const currentRoute = state.routeNames[state.index]
 
@@ -59,6 +62,7 @@ const Sidebar = (props: DrawerContentComponentProps) => {
           borderWidth={3}
         />
         <Heading mb={4} size="xl">
+          {/* {ReadUser()} */}
           Mahioussi brahim
         </Heading>
         <MenuButton

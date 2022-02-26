@@ -1,28 +1,29 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { Icon, VStack, useColorModeValue, Fab } from 'native-base'
 import { AntDesign } from '@expo/vector-icons'
 import AnimatedColorBox from '../components/animated-color-box'
 import TaskList from '../components/task-list'
-import shortid from 'shortid'
+
 import Masthead from '../components/masthead'
 import NavBar from '../components/navbar'
+import { ToDoItemtype, useStorage } from '../hooks/useStorage'
+import shortid from 'shortid'
 
-const initialData = [
-  {
-    id: shortid.generate(),
-    subject: 'Buy movie tickets for Friday',
-    done: false
-  },
-  {
-    id: shortid.generate(),
-    subject: 'Make a React Native tutorial',
-    done: false
-  }
-]
 
-export default function MainScreen({ test }) {
-  const [data, setData] = useState(initialData)
+
+
+export default function MainScreen({ }) {
+  const [data, setData] = useState<ToDoItemtype[]>([])
   const [editingItemId, setEditingItemId] = useState<string | null>(null)
+  const { StoreToDo, ReadToDo, ClearToDo } = useStorage();
+  useEffect(() => {
+    // ClearToDo()
+    ReadToDo(setData)
+  }, []);
+  useEffect(() => {
+    StoreToDo(data)
+  }, [data]);
+
 
   const handleToggleTaskItem = useCallback(item => {
     setData(prevData => {

@@ -15,6 +15,7 @@ import Masthead from '../components/masthead'
 import LinkButton from '../components/link-button'
 
 const AboutScreen = () => {
+
   return (
     <AnimatedColorBox
       flex={1}
@@ -47,7 +48,7 @@ const AboutScreen = () => {
             />
           </Box>
           <Text fontSize="md" w="full">
-            This is a React Native ToDo app  built by me
+            This is a React Native ToDo app  built by me, i hope you enjoy using it
           </Text>
           <LinkButton
             colorScheme="blue"
@@ -81,7 +82,7 @@ const AboutScreen = () => {
             colorScheme="purple"
             size="lg"
             borderRadius="full"
-            href="https://www.portfolio.mahioussi.com"
+            href="https://portfolio.mahioussi.com/"
             leftIcon={
               <Icon as={Feather} name="external-link" size="sm" opacity={0.5} />
             }
