@@ -9,7 +9,10 @@ import Sidebar from './components/sidebar'
 
 const Drawer = createDrawerNavigator()
 
-const App = () => {
+interface app {
+  name: string,
+}
+const App = ({ name }: app) => {
 
   const value = [
     {
@@ -34,7 +37,7 @@ const App = () => {
   return (
     <Drawer.Navigator
       initialRouteName="Main"
-      drawerContent={props => <Sidebar {...props} />}
+      drawerContent={props => <Sidebar  {...props} />}
       screenOptions={{
         headerShown: false,
         drawerType: 'back',

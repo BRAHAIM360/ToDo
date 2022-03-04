@@ -80,5 +80,39 @@ export const useStorage = () => {
     }
   }
 
-  return { StoreUser, ReadUser, StoreToDo, ReadToDo, ClearToDo }
+  const setUser = async (value: string) => {
+    try {
+      await AsyncStorage.setItem('name', value)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  const getUser = async () => {
+    let name
+    try {
+      name = await AsyncStorage.getItem('name')
+    } catch (error) {
+      console.log(error)
+    }
+    return name
+  }
+  const removeUser = async () => {
+    let name
+    try {
+      name = await AsyncStorage.removeItem('name')
+    } catch (error) {
+      console.log(error)
+    }
+    return name
+  }
+  return {
+    StoreUser,
+    ReadUser,
+    StoreToDo,
+    ReadToDo,
+    ClearToDo,
+    setUser,
+    getUser,
+    removeUser
+  }
 }

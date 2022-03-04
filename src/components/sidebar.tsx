@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useContext, useState } from 'react'
 import {
   HStack,
   VStack,
@@ -13,14 +13,19 @@ import AnimatedColorBox from './animated-color-box'
 import ThemeToggle from './theme-toggle'
 import { Feather } from '@expo/vector-icons'
 import MenuButton from './menu-button'
+import { TouchableOpacity, TouchableWithoutFeedback } from 'react-native-gesture-handler'
+import type { RouteProp, } from '@react-navigation/native';
+import { Context } from '../navigation/appNavigator'
 
-const Sidebar = (props: DrawerContentComponentProps) => {
+interface SidebarProps extends DrawerContentComponentProps {
+  route?: any,
+}
 
+const Sidebar = (props: SidebarProps) => {
 
-
-  const { state, navigation } = props
+  const name = useContext(Context);
+  const { state, navigation, route } = props
   const currentRoute = state.routeNames[state.index]
-
   const handlePressBackButton = useCallback(() => {
     navigation.closeDrawer()
   }, [navigation])
@@ -61,10 +66,12 @@ const Sidebar = (props: DrawerContentComponentProps) => {
           borderColor="secondary.500"
           borderWidth={3}
         />
-        <Heading mb={4} size="xl">
-          {/* {ReadUser()} */}
-          Mahioussi brahim
-        </Heading>
+        <TouchableWithoutFeedback onPress={() => navigation.navigate("Name")}>
+          <Heading mb={4} size="xl">
+            {/* {ReadUser()} */}
+            {name}
+          </Heading>
+        </TouchableWithoutFeedback>
         <MenuButton
           active={currentRoute === 'Main'}
           onPress={handlePressMenuMain}
