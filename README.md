@@ -17,7 +17,6 @@ Try in on  play store [![Expo Go](./doc/google-play-badge.png)](https://play.goo
 - [NativeBase(v3)](https://nativebase.io/) - Themable component library
 - [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/) - Animations
 - [React Native SVG](https://github.com/react-native-svg/react-native-svg) - Drawing SVG
-- [Moti](https://moti.fyi/) - Helper module for Reanimated 2 
 
 ## Project structure
 
