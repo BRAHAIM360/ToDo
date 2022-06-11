@@ -1,6 +1,6 @@
 # Smoothly Animated ToDo App built with React Native
 
-![Thumbnail](./doc/images/1.jpg)
+![Thumbnail](./doc/images/main.png)
 
 Try it in Expo  on [![Play Store](./doc/expo-logo.svg)](https://expo.dev/@brahim360/animated-todo)
 Try in on  play store [![Expo Go](./doc/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.mahioussi.todo)
