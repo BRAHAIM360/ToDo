@@ -3,7 +3,7 @@
 ![Thumbnail](./doc/images/main.png)
 
 Try it in Expo  on [![Play Store](./doc/expo-logo.svg)](https://expo.dev/@brahim360/animated-todo)
-Try in on  play store [![Expo Go](./doc/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.mahioussi.todo)
+Try in on  play store [![Expo Go](./doc/google.svg)](https://play.google.com/store/apps/details?id=com.mahioussi.todo)
 
 <!-- The animated checkbox component has been published as [an NPM module `react-native-checkbox-reanimated`](https://github.com/craftzdog/react-native-checkbox-reanimated).
 
