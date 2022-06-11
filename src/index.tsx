@@ -9,23 +9,10 @@ import Sidebar from './components/sidebar'
 
 const Drawer = createDrawerNavigator()
 
-interface app {
-  name: string,
-}
-const App = ({ name }: app) => {
 
-  const value = [
-    {
-      id: shortid.generate(),
-      subject: 'Buy movie tickets for Friday',
-      done: false
-    },
-    {
-      id: shortid.generate(),
-      subject: 'Make a React Native tutorial',
-      done: false
-    }
-  ]
+const App = () => {
+
+
   const storeData = async (value: any) => {
     try {
       await AsyncStorage.setItem('@storage_Key', value)

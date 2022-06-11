@@ -4,15 +4,14 @@ import AppContainer from '../components/app-container';
 import Navigator from './..'
 
 interface appProps {
-    route: any
+
 }
 
-const App = ({ route }: appProps) => {
+const App = () => {
 
-    const { name } = route.params
     return (
         <AppContainer>
-            <Navigator name={name} />
+            <Navigator />
         </AppContainer>
     );
 }

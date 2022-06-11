@@ -15,16 +15,16 @@ import { Feather } from '@expo/vector-icons'
 import MenuButton from './menu-button'
 import { TouchableOpacity, TouchableWithoutFeedback } from 'react-native-gesture-handler'
 import type { RouteProp, } from '@react-navigation/native';
-import { Context } from '../navigation/appNavigator'
+import { UserContext } from '../utils/context'
 
 interface SidebarProps extends DrawerContentComponentProps {
-  route?: any,
+
 }
 
 const Sidebar = (props: SidebarProps) => {
+  const { userName } = useContext(UserContext);
 
-  const name = useContext(Context);
-  const { state, navigation, route } = props
+  const { state, navigation } = props
   const currentRoute = state.routeNames[state.index]
   const handlePressBackButton = useCallback(() => {
     navigation.closeDrawer()
@@ -69,7 +69,7 @@ const Sidebar = (props: SidebarProps) => {
         <TouchableWithoutFeedback onPress={() => navigation.navigate("Name")}>
           <Heading mb={4} size="xl">
             {/* {ReadUser()} */}
-            {name}
+            {userName}
           </Heading>
         </TouchableWithoutFeedback>
         <MenuButton

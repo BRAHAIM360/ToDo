@@ -5,7 +5,8 @@ import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { COLORS } from '../constants';
 import { backGround1 } from '../constants/images';
 import { useStorage } from '../hooks/useStorage';
-import { Context } from '../navigation/appNavigator';
+import { UserContext } from '../utils/context';
+
 
 export interface EnterNameProps {
     navigation: NativeStackNavigationProp<any, any>,
@@ -15,12 +16,12 @@ const { width, height } = Dimensions.get("screen")
 const EnterName: React.FC<EnterNameProps> = ({ navigation }) => {
     const [name, setName] = React.useState("")
     const { setUser } = useStorage();
-    const namee = React.useContext(Context);
+    const { setUserName } = React.useContext(UserContext);
     return (
         <ImageBackground style={styles.container} source={backGround1}>
             <Text style={styles.text}>Enter Your Name</Text>
             <TextInput style={styles.input} placeholder='Your name is' value={name} onChangeText={(e) => setName(e)} />
-            <TouchableOpacity style={styles.button} onPress={() => setUser(name).then(() => navigation.navigate("app", name))} >
+            <TouchableOpacity style={styles.button} onPress={() => setUser(name).then(() => { setUserName(name), navigation.navigate("app") })} >
                 <Text>Enter</Text>
             </TouchableOpacity>
         </ImageBackground>

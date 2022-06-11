@@ -21,7 +21,7 @@ const onBoardings = [
   {
     title: "What I'm gonna do",
     description:
-      "Think off all what you want to do or accomplishe today",
+      "Think of all what you want to do or accomplishe today",
     img: onboarding1,
   },
   {
@@ -33,7 +33,7 @@ const onBoardings = [
   {
     title: "Job done",
     description:
-      "Hilight in the app the tasks that you did accomplished",
+      "Highlight in the app the tasks that you did accomplished",
     img: onboarding3,
   },
 ];
