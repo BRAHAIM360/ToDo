@@ -1,8 +1,9 @@
 # Smoothly Animated ToDo App built with React Native
 
-![Thumbnail](./doc/thumb.jpg)
+![Thumbnail](./doc/Web 1920 – 1.png)
 
-Try the demo on [![Expo Go](./doc/expo-logo.svg)](https://expo.dev/@brahim360/animated-todo)
+Try it in Expo  on [![Expo Go](./doc/expo-logo.svg)](https://expo.dev/@brahim360/animated-todo)
+Try in on  play store [![Expo Go](./doc/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.mahioussi.todo)
 
 <!-- The animated checkbox component has been published as [an NPM module `react-native-checkbox-reanimated`](https://github.com/craftzdog/react-native-checkbox-reanimated).
 
@@ -16,7 +17,7 @@ Try the demo on [![Expo Go](./doc/expo-logo.svg)](https://expo.dev/@brahim360/an
 - [NativeBase(v3)](https://nativebase.io/) - Themable component library
 - [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/) - Animations
 - [React Native SVG](https://github.com/react-native-svg/react-native-svg) - Drawing SVG
-- [Moti](https://moti.fyi/) - Helper module for Reanimated 2
+- [Moti](https://moti.fyi/) - Helper module for Reanimated 2 
 
 ## Project structure
 
@@ -39,8 +40,3 @@ yarn
 yarn start
 ```
 
----
-
-Looking for a Markdown note-taking app? Check out my app called Inkdrop:
-
-[![Inkdrop](https://github.com/craftzdog/dotfiles-public/raw/master/images/inkdrop.png)](https://www.inkdrop.app/)
